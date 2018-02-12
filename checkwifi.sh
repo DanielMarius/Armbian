@@ -19,7 +19,7 @@
 #
 # Instructions:
 # o Install where you want to run it from like /usr/local/bin
-# o chmod 0755 /usr/local/bin/checketh.sh 
+# o chmod 0755 /usr/local/bin/checkwifi.sh 
 # o Add to crontab (usualy `nano /etc/crontab` and read below...)
 #
 # Run Every 5 mins - Seems like ever min is over kill unless
@@ -28,16 +28,16 @@
 #
 # Ad this line to your crontab line if you want this script running 
 # at every 5 minutes.
-# */5 * * * * root   bash /usr/local/bin/checketh.sh > /dev/null 
+# */5 * * * * root   bash /usr/local/bin/checkwifi.sh > /dev/null 
 #
 ##################################################################
 # Settings
 # Where and what you want to call the Lockfile
-lockfile='/var/run/checketh.pid'
+lockfile='/var/run/checkwifi.pid'
 # Which Interface do you want to check/fix
-utp='eth0'
+utp='wlan0'
 # Log file
-logfile='/var/log/routereth.log'
+logfile='/var/log/checkwifi.log'
 ##################################################################
 
 ### Check if log files are in place.
